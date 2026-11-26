@@ -1,14 +1,126 @@
-<!doctype html><n><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#191b1d"><title>Conblox</title><style>
-:root{--bg:#191b1d;--panel:#25292d;--line:#3a4046;--text:#f7f7f8;--muted:#aeb4bb;--blue:#00a2ff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px Arial,sans-serif}a{color:inherit;text-decoration:none}.top{height:60px;background:#111315;border-bottom:1px solid #303438;display:flex;align-items:center;gap:26px;padding:0 max(20px,calc((100vw - 1200px)/2));position:sticky;top:0;z-index:2}.brand{font-size:25px;font-weight:900;letter-spacing:-1.5px}.brand span{color:var(--blue)}nav{display:flex;gap:22px;font-weight:bold}.search{margin-left:auto;background:#292d31;border:1px solid #41464b;border-radius:6px;padding:10px;color:white;width:min(260px,25vw)}button{font:inherit;cursor:pointer;border:0;border-radius:6px;padding:10px 17px;font-weight:bold}.primary{background:var(--blue);color:white}.secondary{background:#343a40;color:white;border:1px solid #4a5158}.wrap{max-width:1200px;margin:auto;padding:28px 22px 60px}.welcome{display:flex;align-items:center;justify-content:space-between;margin:12px 0 28px}.welcome h1{font-size:30px;margin:0 0 6px}.welcome p,.stats{color:var(--muted)}.hero{background:linear-gradient(110deg,#12344a,#17648a 55%,#263d63);border:1px solid #2e6687;border-radius:10px;padding:30px;display:flex;justify-content:space-between;align-items:center;min-height:180px;margin-bottom:32px}.hero h2{font-size:28px;margin:0 0 8px}.hero p{color:#d5e8f4;max-width:480px;line-height:1.5}.hero-art{font-size:78px;padding:0 30px}.head{display:flex;justify-content:space-between;align-items:center;margin:26px 0 14px}.head h2{font-size:20px;margin:0}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.game[hidden]{display:none}.thumb{aspect-ratio:1.55;border-radius:8px;display:grid;place-items:center;font-size:54px;border:1px solid #3b444c;background:linear-gradient(135deg,#3b596f,#1d2935)}.game:nth-child(2) .thumb{background:linear-gradient(135deg,#5b4b87,#27223d)}.game:nth-child(3) .thumb{background:linear-gradient(135deg,#27715e,#173d36)}.game:nth-child(4) .thumb{background:linear-gradient(135deg,#87542e,#3e2920)}.game:nth-child(5) .thumb{background:linear-gradient(135deg,#3c6998,#1b314d)}.game:nth-child(6) .thumb{background:linear-gradient(135deg,#82515f,#3e2833)}.game:nth-child(7) .thumb{background:linear-gradient(135deg,#6c7134,#33371d)}.game:nth-child(8) .thumb{background:linear-gradient(135deg,#4c5c67,#202a31)}.game h3{font-size:14px;margin:9px 0 4px}.stats{font-size:12px}.empty{border:1px dashed #50575e;border-radius:9px;padding:25px;color:var(--muted);text-align:center;margin-top:12px}.footer{border-top:1px solid #303438;padding:24px;color:#858d95;text-align:center}.modal{position:fixed;inset:0;background:#000a;display:none;place-items:center;z-index:5;padding:18px}.modal.open{display:grid}.dialog{width:min(420px,100%);background:#25292d;border:1px solid #454c52;border-radius:10px;padding:24px}.dialog input{width:100%;margin:7px 0;padding:12px;border-radius:6px;border:1px solid #50575e;background:#171a1c;color:white}.dialog .primary{width:100%;margin-top:10px}.close{float:right;background:none;color:white;font-size:22px;padding:0}.notice{font-size:12px;color:var(--muted);margin-top:14px}@media(max-width:850px){.grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.top{height:auto;flex-wrap:wrap;padding:12px 16px;gap:12px}nav{order:3;width:100%;justify-content:space-between}.search{width:40vw}.wrap{padding:22px 16px}.welcome{align-items:flex-start;flex-direction:column;gap:15px}.hero{padding:20px}.hero-art{font-size:48px;padding:0}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
-</style></head><body>
-<header class="top"><a class="brand" href="#">con<span>blox</span></a><nav><a href="#discover">Discover</a><a href="#games">Games</a><a href="#create">Create</a></nav><input id="search" class="search" type="search" placeholder="Search experiences..." aria-label="Search"><button class="primary" id="loginTop">Log In</button></header>
-<main class="wrap"><section class="welcome"><div><h1>Discover</h1><p>Explore experiences made by the Conblox community.</p></div><div><button class="secondary" id="signup">Sign Up</button> <button class="primary" id="login">Log In</button></div></section>
-<section class="hero"><div><h2>Your next adventure starts here.</h2><p>Jump into community-made worlds, meet new players and find something new to play every day.</p><button class="primary" onclick="document.querySelector('#games').scrollIntoView({behavior:'smooth'})">Explore games</button></div><div class="hero-art" aria-hidden="true">🧱🎮</div></section>
-<section id="discover"><div class="head"><h2>Featured experiences</h2><a href="#games">See all →</a></div><div class="grid" id="games">
-<article class="game" data-name="obby adventure"><div class="thumb">🏃</div><h3>Obby Adventure</h3><div class="stats">⭐ Featured · Adventure</div></article><article class="game" data-name="city life roleplay"><div class="thumb">🏙️</div><h3>City Life Roleplay</h3><div class="stats">⭐ Featured · Roleplay</div></article><article class="game" data-name="build a world"><div class="thumb">🏗️</div><h3>Build a World</h3><div class="stats">⭐ Featured · Building</div></article><article class="game" data-name="survival island"><div class="thumb">🌴</div><h3>Survival Island</h3><div class="stats">⭐ Featured · Survival</div></article><article class="game" data-name="speed legends"><div class="thumb">🏎️</div><h3>Speed Legends</h3><div class="stats">🔥 Popular · Racing</div></article><article class="game" data-name="tower defense"><div class="thumb">🛡️</div><h3>Tower Defense</h3><div class="stats">🔥 Popular · Strategy</div></article><article class="game" data-name="farm days"><div class="thumb">🌻</div><h3>Farm Days</h3><div class="stats">✨ New · Simulation</div></article><article class="game" data-name="space explorers"><div class="thumb">🚀</div><h3>Space Explorers</h3><div class="stats">✨ New · Adventure</div></article></div><div id="none" class="empty" hidden>No experiences match your search.</div></section>
-<section id="create"><div class="head"><h2>Create on Conblox</h2></div><div class="empty">Have an idea for a game? Build your experience and share it with the community.<br><br><a href="https://github.com/anthonypinedasantos-beep/conblox">View the Conblox project on GitHub ↗</a></div></section></main>
-<footer class="footer">Conblox · A community experience project · Not affiliated with Roblox Corporation.</footer>
-<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="dialog"><button class="close" id="close">×</button><h2 id="modalTitle">Welcome to Conblox</h2><p id="modalText">Visual demo only. Authentication is not connected.</p><form id="form"><input placeholder="Username" autocomplete="username" required><input type="password" placeholder="Password" autocomplete="current-password" required><button class="primary">Continue</button></form><div class="notice">Demo only — do not enter a real password. No data is sent.</div></div></div>
-<script>
-const modal=document.getElementById('modal'),msg=document.getElementById('modalText');function show(mode){document.getElementById('modalTitle').textContent=mode==='signup'?'Create your Conblox account':'Log in to Conblox';modal.classList.add('open')}['loginTop','login'].forEach(id=>document.getElementById(id).onclick=()=>show('login'));document.getElementById('signup').onclick=()=>show('signup');document.getElementById('close').onclick=()=>modal.classList.remove('open');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open')};document.getElementById('form').onsubmit=e=>{e.preventDefault();msg.textContent='Demo only: no account was created and no data was sent.';e.target.reset()};document.getElementById('search').oninput=e=>{let q=e.target.value.toLowerCase().trim(),n=0;document.querySelectorAll('.game').forEach(c=>{let ok=c.dataset.name.includes(q);c.hidden=!ok;if(ok)n++});document.getElementById('none').hidden=n!==0};
-</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0066b3">
+  <meta name="description" content="Conblox — play, explore and discover community-made experiences.">
+  <title>Conblox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Conblox home">CON<span>BLOX</span></a>
+    <nav class="topnav" aria-label="Main navigation">
+      <a href="#home" data-route="home">Home</a>
+      <a href="#games" data-route="games">Games</a>
+      <a href="#catalog" data-route="catalog">Catalog</a>
+      <a href="#develop" data-route="develop">Develop</a>
+    </nav>
+    <form class="top-search" id="searchForm" role="search">
+      <input id="globalSearch" type="search" placeholder="Search games..." aria-label="Search Conblox">
+      <button aria-label="Search">⌕</button>
+    </form>
+    <div class="account-actions">
+      <button class="text-button" data-auth="login">Log In</button>
+      <button class="signup-button" data-auth="signup">Sign Up</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-user">
+        <div class="avatar">?</div>
+        <div><strong>Welcome!</strong><small>Guest player</small></div>
+      </div>
+      <a class="side-link active" href="#home" data-route="home"><span>⌂</span> Home</a>
+      <a class="side-link" href="#profile" data-route="profile"><span>♙</span> Profile</a>
+      <a class="side-link" href="#messages" data-route="messages"><span>✉</span> Messages</a>
+      <a class="side-link" href="#friends" data-route="friends"><span>♧</span> Friends</a>
+      <div class="side-heading">DISCOVER</div>
+      <a class="side-link" href="#games" data-route="games"><span>▣</span> Games</a>
+      <a class="side-link" href="#catalog" data-route="catalog"><span>◇</span> Catalog</a>
+      <a class="side-link" href="#develop" data-route="develop"><span>⚒</span> Create</a>
+      <div class="sidebar-note">Conblox is a community project. Sign-in and social features are demo-only.</div>
+    </aside>
+
+    <main id="main" class="main-content" tabindex="-1">
+      <section class="page" data-page="home">
+        <div class="welcome-row">
+          <div><h1>Welcome to Conblox!</h1><p>Discover millions of ways to play.</p></div>
+          <div class="welcome-actions"><button class="blue-button" data-auth="signup">Join Conblox</button></div>
+        </div>
+        <section class="banner">
+          <div><span class="eyebrow">YOUR NEXT ADVENTURE</span><h2>Make something<br> unforgettable.</h2><p>Explore experiences built by the community.</p><a class="banner-button" href="#games">Browse games <span>›</span></a></div>
+          <div class="banner-blocks" aria-hidden="true"><i></i><b></b><em></em></div>
+        </section>
+        <div class="section-title"><h2>Featured Games</h2><a href="#games">See All <span>›</span></a></div>
+        <div class="game-grid" id="featuredGames"></div>
+        <div class="section-title"><h2>Popular Categories</h2></div>
+        <div class="category-grid">
+          <a href="#games?category=Adventure" data-category="Adventure">Adventure</a>
+          <a href="#games?category=Roleplay" data-category="Roleplay">Roleplay</a>
+          <a href="#games?category=Obby" data-category="Obby">Obby</a>
+          <a href="#games?category=Simulator" data-category="Simulator">Simulator</a>
+        </div>
+      </section>
+
+      <section class="page" data-page="games" hidden>
+        <div class="page-heading"><div><h1>Games</h1><p>Find your next favorite experience.</p></div></div>
+        <div class="filter-row" id="gameFilters">
+          <button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Adventure">Adventure</button><button class="filter" data-filter="Roleplay">Roleplay</button><button class="filter" data-filter="Obby">Obby</button><button class="filter" data-filter="Simulator">Simulator</button>
+        </div>
+        <div class="game-grid" id="allGames"></div>
+        <p class="empty-state" id="gameEmpty" hidden>No games found. Try another search or category.</p>
+      </section>
+
+      <section class="page" data-page="catalog" hidden>
+        <div class="page-heading"><div><h1>Catalog</h1><p>Discover items for your Conblox avatar.</p></div></div>
+        <div class="filter-row" id="catalogFilters"><button class="filter active" data-filter="All">All Items</button><button class="filter" data-filter="Hats">Hats</button><button class="filter" data-filter="Faces">Faces</button><button class="filter" data-filter="Accessories">Accessories</button></div>
+        <div class="catalog-grid" id="catalogItems"></div>
+        <p class="demo-note">Catalog items are sample designs. Purchases and avatar inventory are not connected.</p>
+      </section>
+
+      <section class="page" data-page="develop" hidden>
+        <div class="page-heading"><div><h1>Develop</h1><p>Bring your ideas to life.</p></div></div>
+        <div class="info-panel"><div class="info-icon">⚒</div><div><h2>Create on Conblox</h2><p>Build your own experiences and share them with the community. The creator portal is a preview; publishing tools are not connected yet.</p><a class="blue-button inline-button" href="https://github.com/anthonypinedasantos-beep/conblox" target="_blank" rel="noopener">View project source ↗</a></div></div>
+        <div class="section-title"><h2>Getting started</h2></div>
+        <div class="steps"><article><b>01</b><h3>Plan your game</h3><p>Choose a genre and sketch out the main idea.</p></article><article><b>02</b><h3>Build your world</h3><p>Create maps, mechanics and original assets.</p></article><article><b>03</b><h3>Share it</h3><p>Prepare a game page and invite people to play.</p></article></div>
+      </section>
+
+      <section class="page" data-page="profile" hidden>
+        <div class="page-heading"><div><h1>Profile</h1><p>Player profile preview.</p></div></div>
+        <div class="profile-panel"><div class="profile-avatar">?</div><div><h2>Guest</h2><p>This is a sample profile. Log-in and profile editing are not available yet.</p><button class="blue-button" data-auth="signup">Create an account</button></div></div>
+      </section>
+
+      <section class="page" data-page="messages" hidden><div class="page-heading"><div><h1>Messages</h1><p>Your conversations will appear here.</p></div></div><div class="empty-panel">Messages are not available in this preview.</div></section>
+      <section class="page" data-page="friends" hidden><div class="page-heading"><div><h1>Friends</h1><p>Connect with other players.</p></div></div><div class="empty-panel">Friend lists are not available in this preview.</div></section>
+    </main>
+  </div>
+
+  <footer class="footer"><span>© 2026 Conblox</span><span>Community-built experience platform preview</span><a href="https://github.com/anthonypinedasantos-beep/conblox">GitHub</a></footer>
+
+  <dialog id="authDialog" class="modal">
+    <form method="dialog"><button class="modal-close" aria-label="Close">×</button></form>
+    <div class="modal-logo">CON<span>BLOX</span></div>
+    <h2 id="authTitle">Log in to Conblox</h2>
+    <p id="authDescription">Account services are not connected in this preview.</p>
+    <form id="authForm" class="auth-form">
+      <label>Username<input name="username" autocomplete="username" placeholder="Enter username" required></label>
+      <label>Password<input name="password" type="password" autocomplete="current-password" placeholder="Enter password" required></label>
+      <button class="blue-button" id="authSubmit">Log In</button>
+    </form>
+    <p class="modal-warning">Demo interface only. Do not enter a real password. Nothing is sent or saved.</p>
+  </dialog>
+
+  <dialog id="gameDialog" class="modal game-modal">
+    <form method="dialog"><button class="modal-close" aria-label="Close">×</button></form>
+    <div class="game-modal-cover" id="gameCover">🎮</div>
+    <h2 id="gameTitle">Game title</h2><p id="gameDescription"></p>
+    <div class="game-modal-meta" id="gameMeta"></div>
+    <button class="blue-button" id="playButton">Play</button>
+    <p class="modal-warning" id="playNotice">Game launching is not connected in this preview.</p>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
