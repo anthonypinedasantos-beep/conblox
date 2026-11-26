@@ -1,15 +1,19 @@
 # Conblox
 
-A responsive Roblox-inspired discovery homepage for GitHub Pages.
+A classic-era game-discovery website concept, rebuilt as an original static frontend for GitHub Pages.
+
+## Included
+- 2016-inspired blue navigation and left sidebar
+- Home, Games, Catalog, Develop, Profile, Messages and Friends views
+- Search, category filters and interactive game detail dialogs
+- Responsive desktop and mobile layouts
+- Demo-only sign-in and sign-up dialogs
 
 ## Deploy
-The workflow in `.github/workflows/pages.yml` publishes the repository root on every push to `main`. In GitHub, open **Settings → Pages** and select **GitHub Actions** as the source.
+The workflow at `.github/workflows/pages.yml` publishes the repository root on every push to `main`. In GitHub, open **Settings → Pages** and select **GitHub Actions** as the source.
 
-## Current scope
-- Responsive game-discovery homepage
-- Featured experience cards and client-side search
-- Demo login/signup modal (no real authentication or data submission)
-- Static hosting only; no backend, user accounts, or playable games yet
+## Important limitations
+This is a static frontend. It does not include real accounts, a database, messaging, purchases, an avatar inventory, game servers or a playable game client. Demo buttons explain these limitations and do not send or store credentials.
 
-## Source note
-The referenced 2016 repository is a native C++ Windows client/Studio codebase, not a browser frontend that GitHub Pages can execute. It also does not show a clear top-level redistribution license. This site is therefore an original frontend inspired by classic game-discovery layouts and does not bundle or copy that source: https://github.com/SANS3R66/roblox-2016-source-code
+## About the referenced 2016 source
+The repository at https://github.com/SANS3R66/roblox-2016-source-code contains a large native C++ Windows client/Studio solution. Its build guide requires Visual Studio and Win32 build configurations; it is not browser JavaScript or a website that GitHub Pages can run. GitHub currently reports no declared repository licence. This project therefore recreates the classic-era web experience with original HTML, CSS and JavaScript rather than redistributing that source code.
